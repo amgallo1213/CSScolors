@@ -68,6 +68,10 @@ a {
     background: #c1dff0;
     color: #0096c7;
 }
+#pink   {
+    background: #fadde1;
+    color: #ff8fab;
+}
 
 .color-gallery {
     --s: 130px;
