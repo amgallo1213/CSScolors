@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5em;
+    margin-top: -20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.btn {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #000;
+    border-color: #000;
+    color: #e9ecef;
+    margin: 5px;
+}
+
+.btn-div    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #e9ecef;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#home {
+    background: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#yellow {
+    background: #0496ff;
+    color: #ffea00;
+}
+
+#purple {
+    background: #ff6d00;
+    color: #5a189a;
+}
+
+#green {
+    background: #ed4d6e;
+    color: #31cb00;
+}
+
+#gray   {
+    background: #c20114;
+    color: #adacb5;
+}
+
+#blue   {
+    background: #c1dff0;
+    color: #0096c7;
+}
+
+.color-gallery {
+    --s: 130px;
+    --g: 10px;
+    display: grid;
+    margin: calc(var(--s) + var(--g));
+}
+
+.color-gallery>img {
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 0.866;
+    object-fit: cover;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+    transform: translate(var(--_x, 0), var(--_y, 0)) scale(var(--_t, 1));
+}
+
+.color-gallery>img:hover {
+    z-index: 1;
+    --_t: 1.2;
+}
+
+.color-gallery>img:nth-child(1) {
+    --_x: calc(-100% - var(--g))
+}
+
+.color-gallery>img:nth-child(7) {
+    --_x: calc(100% + var(--g))
+}
+
+.color-gallery>img:nth-child(3),
+.color-gallery>img:nth-child(5) {
+    --_y: calc(-75% - .87*var(--g))
+}
+
+.color-gallery>img:nth-child(4),
+.color-gallery>img:nth-child(6) {
+    --_y: calc(75% + .87*var(--g))
+}
+
+.color-gallery>img:nth-child(3),
+.color-gallery>img:nth-child(4) {
+    --_x: calc(-50% - .5*var(--g))
+}
+
+.color-gallery>img:nth-child(5),
+.color-gallery>img:nth-child(6) {
+    --_x: calc(50% + .5*var(--g))
+}
+
